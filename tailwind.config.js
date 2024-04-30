@@ -11,6 +11,34 @@ export default {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
+    themes: [
+
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          ".btn": {
+            "color": "#333333",
+            
+          },
+          "body": {
+            "color": "#333333",
+           
+          },
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          ".btn": {
+            
+            "color": "#ffffff",
+          },
+          "body": {
+            "color": "#ffffff",
+           
+          },
+        },
+      },
+    ],
   },
 }

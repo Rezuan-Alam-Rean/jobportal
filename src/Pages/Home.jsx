@@ -1,10 +1,14 @@
+import Banner from "../Components/Banner";
+
+
 
 const Home = () => {
     return (
-        <div className="text-9xl text-gray-50" >
-            hi
-        </div>
+      <div className=" ">
+        <Banner/>
+        
+      </div>
     );
-};
-
+  };
+  
 export default Home;
