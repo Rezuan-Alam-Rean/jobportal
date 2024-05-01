@@ -24,6 +24,11 @@ const Jobs = () => {
         setSort(event.target.value);
     };
 
+    const showAllJobs = () => {
+        setFilter("");
+        setSort(""); // Reset the sort state as well
+    };
+
     const filteredJobs = jobs
         .filter((job) => {
             return filter ? job.category === filter : true;
@@ -40,9 +45,10 @@ const Jobs = () => {
         });
 
     return (
-        <div className="flex flex-col md:flex-row w-full">
-            <div className="md:w-1/3 lg:w-1/4  p-4 md:border-r-2 border-gray-200">
-                <div className="space-y-4 w-[90%] mx-auto justify-center flex flex-col  ">
+        <div className="flex flex-col sm:flex-row  lg:w-full md:px-16">
+            <div className="lg:w-1/4 p-4 md:border-r-2 border-gray-200 md:sticky md:top-0 md:h-screen overflow-auto">
+                <div className="space-y-4 w-[80%] mx-auto flex flex-col ">
+                    
                     <h4 className="mt-6 mb-3 font-bold">Search jobs by name</h4>
                     <input
                         className="input input-bordered"
@@ -79,12 +85,21 @@ const Jobs = () => {
                             )
                         )}
                     </select>
+                    <button
+                        onClick={showAllJobs}
+                        className="btn btn-outline  mb-4"
+                    >
+                       Reset Filters
+                    </button>
                 </div>
             </div>
-            <div className="md:w-2/3 lg:w-3/4 p-4">
+            <div className="md:w-2/3 lg:w-3/4  p-4">
+
+                <div className="w-[95%]    md:w-[79%] mx-auto">
+                <h3 className="mt-4  font-semibold text-3xl mb-8 " >Find Your Dream Jobs from JobHub</h3>
                 {filteredJobs.map((job) => (
                     <div key={job.id} className="mb-6 mt-2">
-                        <div className="card w-[95%] md:w-[70%] mx-auto h-full border-2">
+                        <div className="card  h-full border-2">
                             <div className="card-body">
                                 <h2 className="card-title">{job.title}</h2>
                                 <p className="font-light text-xl">{job.company}</p>
@@ -111,6 +126,9 @@ const Jobs = () => {
                         </div>
                     </div>
                 ))}
+
+                </div>
+
             </div>
         </div>
     );
