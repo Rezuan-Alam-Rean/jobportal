@@ -1,0 +1,125 @@
+{
+    "jobs": [
+      {
+        "id": "001",
+        "category": "Engineering",
+        "title": "Software Engineer",
+        "location": "Tokyo, Japan",
+        "type": "Full-Time",
+        "description": "Develop cutting-edge software solutions for global clients.",
+        "requirements": {
+          "education": "Bachelor's in Computer Science or equivalent",
+          "experience": "2+ years in software development"
+        },
+        "company": "Tech Innovations Inc.",
+        "image": "https://picsum.photos/id/237/200/300",
+        "salary": "¥6,200,000 per year"
+      },
+      {
+        "id": "002",
+        "category": "Marketing",
+        "title": "Digital Marketing Specialist",
+        "location": "Osaka, Japan",
+        "type": "Part-Time",
+        "description": "Craft and execute online marketing strategies.",
+        "requirements": {
+          "education": "Degree in Marketing or related field",
+          "experience": "1+ year in digital marketing"
+        },
+        "company": "Creative Solutions Ltd.",
+        "image": "https://picsum.photos/id/187/200/300",
+        "salary": "¥5,000,000 per year"
+      },
+      {
+        "id": "003",
+        "category": "Design",
+        "title": "UI/UX Designer",
+        "location": "Kyoto, Japan",
+        "type": "Contract",
+        "description": "Design intuitive user interfaces for web and mobile applications.",
+        "requirements": {
+          "education": "Degree in Design or related field",
+          "experience": "3+ years in UI/UX design"
+        },
+        "company": "DesignPro Studios",
+        "image": "https://picsum.photos/id/238/200/300",
+        "salary": "¥5,500,000 per year"
+      },
+      {
+        "id": "004",
+        "category": "Data Science",
+        "title": "Data Scientist",
+        "location": "Fukuoka, Japan",
+        "type": "Full-Time",
+        "description": "Analyze complex data sets to drive innovation and business solutions.",
+        "requirements": {
+          "education": "Master's in Data Science or equivalent",
+          "experience": "5+ years in data analysis"
+        },
+        "company": "DataWise Analytics",
+        "image": "https://picsum.photos/id/204/200/300",
+        "salary": "¥7,000,000 per year"
+      },
+      {
+        "id": "005",
+        "category": "Engineering",
+        "title": "Frontend Developer",
+        "location": "Yokohama, Japan",
+        "type": "Full-Time",
+        "description": "Create responsive web interfaces using modern frontend technologies.",
+        "requirements": {
+          "education": "Bachelor's in Computer Science or related field",
+          "experience": "2+ years in frontend development"
+        },
+        "company": "WebCrafters Japan",
+        "image": "https://picsum.photos/id/235/200/300",
+        "salary": "¥6,000,000 per year"
+      },
+      {
+        "id": "006",
+        "category": "Business",
+        "title": "Business Development Manager",
+        "location": "Nara, Japan",
+        "type": "Full-Time",
+        "description": "Identify growth opportunities and build strategic partnerships.",
+        "requirements": {
+          "education": "MBA or equivalent",
+          "experience": "5+ years in business development"
+        },
+        "company": "BizGrowth Solutions",
+        "image": "https://picsum.photos/id/228/200/300",
+        "salary": "¥8,000,000 per year"
+      },
+      {
+        "id": "007",
+        "category": "Healthcare",
+        "title": "Medical Researcher",
+        "location": "Kanazawa, Japan",
+        "type": "Full-Time",
+        "description": "Conduct clinical trials and develop new medical treatments.",
+        "requirements": {
+          "education": "PhD in Medical Science or equivalent",
+          "experience": "3+ years in medical research"
+        },
+        "company": "HealthTech Innovations",
+        "image": "https://picsum.photos/id/1042/200/300",
+        "salary": "¥9,000,000 per year"
+      },
+      {
+        "id": "008",
+        "category": "Education",
+        "title": "ESL Teacher",
+        "location": "Sendai, Japan",
+        "type": "Part-Time",
+        "description": "Teach English as a second language to students of all ages.",
+        "requirements": {
+          "education": "TEFL certification or equivalent",
+          "experience": "1+ year in ESL teaching"
+        },
+        "company": "Global Language Center",
+        "image": "https://picsum.photos/id/1076/200/300",
+        "salary": "¥4,000,000 per year"
+      }
+    ]
+  }
+  

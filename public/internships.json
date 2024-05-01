@@ -1,0 +1,118 @@
+
+{
+  "internships": [
+    {
+      "id": "101",
+      "category": "Business",
+      "title": "Business Analyst Intern",
+      "location": "Nagoya, Japan",
+      "type": "Internship",
+      "description": "Assist in market analysis and project management.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Business Administration",
+        "experience": "Not required"
+      },
+      "company": "Global Enterprises Co.",
+      "salary": "¥1,500,000 per year"
+    },
+    {
+      "id": "102",
+      "category": "Marketing",
+      "title": "Marketing Intern",
+      "location": "Sapporo, Japan",
+      "type": "Internship",
+      "description": "Support the marketing team in campaign development and execution.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Marketing",
+        "experience": "Not required"
+      },
+      "company": "Innovative Marketing Solutions",
+      "salary": "¥1,200,000 per year"
+    },
+    {
+      "id": "103",
+      "category": "IT",
+      "title": "IT Support Intern",
+      "location": "Hiroshima, Japan",
+      "type": "Internship",
+      "description": "Provide technical support and troubleshoot software issues.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Information Technology",
+        "experience": "Not required"
+      },
+      "company": "TechHelp Inc.",
+      "salary": "¥1,300,000 per year"
+    },
+    {
+      "id": "104",
+      "category": "Design",
+      "title": "Graphic Design Intern",
+      "location": "Kobe, Japan",
+      "type": "Internship",
+      "description": "Create visual content for digital and print media.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Graphic Design",
+        "experience": "Not required"
+      },
+      "company": "Creative Minds Media",
+      "salary": "¥1,100,000 per year"
+    },
+    {
+      "id": "105",
+      "category": "Engineering",
+      "title": "Engineering Intern",
+      "location": "Nagasaki, Japan",
+      "type": "Internship",
+      "description": "Assist in the development of engineering projects and research.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Engineering",
+        "experience": "Not required"
+      },
+      "company": "Innovative Engineering Solutions",
+      "salary": "¥1,600,000 per year"
+    },
+    {
+      "id": "106",
+      "category": "Finance",
+      "title": "Finance Intern",
+      "location": "Kumamoto, Japan",
+      "type": "Internship",
+      "description": "Support financial analysis and investment portfolio management.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Finance",
+        "experience": "Not required"
+      },
+      "company": "Wealth Management Partners",
+      "salary": "¥1,800,000 per year"
+    },
+    {
+      "id": "107",
+      "category": "Hospitality",
+      "title": "Hospitality Intern",
+      "location": "Okinawa, Japan",
+      "type": "Internship",
+      "description": "Learn and assist in various aspects of hospitality management.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Hospitality Management",
+        "experience": "Not required"
+      },
+      "company": "Sunshine Resorts",
+      "salary": "¥1,400,000 per year"
+    },
+    {
+      "id": "108",
+      "category": "Technology",
+      "title": "Tech Research Intern",
+      "location": "Hokkaido, Japan",
+      "type": "Internship",
+      "description": "Participate in cutting-edge technology research and development.",
+      "requirements": {
+        "education": "Currently pursuing a degree in Computer Science or related field",
+        "experience": "Not required"
+      },
+      "company": "NextGen Tech Labs",
+      "salary": "¥1,700,000 per year"
+    }
+  ]
+}
+

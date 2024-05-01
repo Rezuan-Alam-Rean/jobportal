@@ -17,13 +17,31 @@ export default {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
           ".btn": {
-            "color": "#333333",
-            
+            "color": "#ffffff",
+            "background-color": "#186dbe",
           },
           "body": {
             "color": "#333333",
            
           },
+          ".bannerdark": {
+            "background-color": "#ecf7fc",
+           
+          },
+          ".bannertext": {
+            "color": "#38BDF8",
+           
+          },
+          ".card-title": {
+            "color": "#186dbe",
+           
+          },
+          ".card": {
+            "background-color": "#ecf7fc",
+            
+          },
+
+         
         },
       },
       {
@@ -37,6 +55,23 @@ export default {
             "color": "#ffffff",
            
           },
+          ".bannerdark": {
+            "background-color": "#2f4149",
+           
+          },
+          ".bannertext": {
+            "color": "#ffffff",
+           
+          },
+          ".card": {
+            "background-color": "#2f4149",
+            
+          },
+          ".card-title": {
+            "color": "#ffffff",
+           
+          },
+         
         },
       },
     ],
