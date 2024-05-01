@@ -139,7 +139,20 @@ const Internships = () => {
                                         </div>
                                         <div className="card-actions justify-end mt-4">
                                             <button className="btn btn-sm">View</button>
-                                            <button className="btn btn-sm">Apply</button>
+                                            <button className="btn btn-sm" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
+                                            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                                                <div className="modal-box">
+                                                    <h3 className="font-bold  text-2xl">Congratulations!</h3>
+                                                    <p className="py-4"> your application has been submit successfully </p>
+                                                    <p className="py-2">Press ESC key or click the button below to close</p>
+                                                    <div className="modal-action">
+                                                        <form method="dialog">
+                                                            {/* if there is a button in form, it will close the modal */}
+                                                            <button className="btn">Close</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </dialog>
                                         </div>
                                     </div>
                                 </div>
