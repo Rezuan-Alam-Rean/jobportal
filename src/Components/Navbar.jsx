@@ -45,12 +45,14 @@ const Navbar = () => {
                 }
 
             >Jobs</NavLink>
-            <NavLink to="About"
+            <NavLink
+                to="Aboutus"
                 className={({ isActive, }) =>
                     isActive ? "text-sky-400" : "hover:text-sky-400"
                 }
 
             >About</NavLink>
+            
         </>
     );
 
@@ -58,7 +60,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar border-b-2 md:px-20 ">
+            <div className="navbar  border-b-2 md:px-20 ">
                 <div className="navbar-start">
                     <div className="dropdown  mr-4">
                         <div tabIndex={0} role="button" className=" lg:hidden">
@@ -77,7 +79,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end gap-x-5">
                     <Link to="login" >
-                    <button className="btn btn-sm">Login</button>
+                        <button className="btn btn-sm">Login</button>
                     </Link>
                     <label className="swap swap-rotate">
 

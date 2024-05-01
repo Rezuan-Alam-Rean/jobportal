@@ -1,6 +1,9 @@
 import Banner from "../Components/Banner";
 import Contact from "../Components/Contact";
-import Jobs from "./Jobs";
+import HowItWorks from "../Components/HowItWorks";
+
+import HomeJobs from "../Components/Shared/HomeJobs";
+
 
 
 
@@ -8,7 +11,8 @@ const Home = () => {
     return (
       <div className=" ">
         <Banner/>
-        <Jobs/>
+        <HomeJobs/>
+        <HowItWorks/>
         <Contact/>
         
       </div>
