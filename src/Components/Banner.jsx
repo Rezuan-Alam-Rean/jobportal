@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import imge from "../assets/image/japan.svg";
 const Banner = () => {
     return (
         <div  className=" bannerdark flex   flex-col md:flex-row justify-center items-center rounded-br-[300px] h-[600px] gap-x-28 bg-cover bg-center">
@@ -21,7 +21,7 @@ const Banner = () => {
             <div className="w-full lg:w-1/3">
                 <img
                     className="rounded-full md:h-[500px] md:w-[500px] h-56 w-56"
-                    src="https://i.ibb.co/dQQ3nbS/pexels-santesson89-19651827-1.jpg"
+                    src={"https://i.ibb.co/dQQ3nbS/pexels-santesson89-19651827-1.jpg"}
                     alt="Job Seeker"
                 />
             </div>

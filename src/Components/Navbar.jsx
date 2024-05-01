@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -60,9 +60,9 @@ const Navbar = () => {
         <div>
             <div className="navbar border-b-2 md:px-20 ">
                 <div className="navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <div className="dropdown  mr-4">
+                        <div tabIndex={0} role="button" className=" lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5  " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <ul tabIndex={0} className=" gap-y-2 p-4  menu menu-sm dropdown-content mt-3 z-[1] font-semibold shadow bg-base-200 rounded-box w-52">
                             {items}
@@ -76,7 +76,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-x-5">
+                    <Link to="login" >
                     <button className="btn btn-sm">Login</button>
+                    </Link>
                     <label className="swap swap-rotate">
 
                         {/* this hidden checkbox controls the state */}

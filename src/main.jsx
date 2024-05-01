@@ -11,6 +11,9 @@ import Errorpage from './Pages/Errorpage';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Jobs from './Pages/Jobs';
+import Internships from './Pages/Internships';
+import Login from './Pages/Login';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +35,11 @@ const router = createBrowserRouter([
       },
       {
         path: "Internships",
-        element: <Jobs/>
+        element: <Internships/>
+      },
+      {
+        path: "login",
+        element: <Login/>,
       },
      
     ],
@@ -42,6 +49,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Toaster />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

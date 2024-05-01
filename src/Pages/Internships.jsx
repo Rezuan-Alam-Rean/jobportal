@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-const Jobs = () => {
-    const [jobs, setJobs] = useState([]);
+const Internships = () => {
+    const [internships, setInternships] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [filter, setFilter] = useState("");
     const [sort, setSort] = useState("");
 
     useEffect(() => {
-        fetch("jobs.json")
+        fetch("internships.json")
             .then((res) => res.json())
-            .then((data) => setJobs(data?.jobs));
+            .then((data) => setInternships(data?.internships));
     }, []);
 
     const handleSearch = (event) => {
@@ -24,45 +24,44 @@ const Jobs = () => {
         setSort(event.target.value);
     };
 
-    const showAllJobs = () => {
+    const showAllInternships = () => {
         setFilter("");
-        setSort(""); // Reset the sort state as well
+        setSort("");
     };
 
-    const filteredJobs = jobs
-        .filter((job) => {
-            return filter ? job.category === filter : true;
+    const filteredInternships = internships
+        .filter((internship) => {
+            return filter ? internship.category === filter : true;
         })
-        .filter((job) => {
-            return sort ? job.type === sort : true;
+        .filter((internship) => {
+            return sort ? internship.type === sort : true;
         })
-        .filter((job) => {
+        .filter((internship) => {
             return (
-                job.title.toLowerCase().includes(searchTerm) ||
-                job.description.toLowerCase().includes(searchTerm) ||
-                job.company.toLowerCase().includes(searchTerm)
+                internship.title.toLowerCase().includes(searchTerm) ||
+                internship.description.toLowerCase().includes(searchTerm) ||
+                internship.company.toLowerCase().includes(searchTerm)
             );
         });
 
     return (
-        <div className="flex flex-col sm:flex-row  lg:w-full md:px-16">
+        <div className="flex flex-col sm:flex-row lg:w-full md:px-16">
             <div className="lg:w-1/4 p-4 md:border-r-2 border-gray-200 md:sticky md:top-0 md:h-screen overflow-auto">
                 <div className="space-y-4 w-[80%] mx-auto flex flex-col ">
-
-                    <h4 className="mt-6 mb-3 font-bold">Search jobs </h4>
+                    <h4 className="mt-6 mb-3 font-bold">Search internships </h4>
                     <input
                         className="input input-bordered"
                         placeholder="Search"
                         onChange={handleSearch}
                     />
 
-                    <h4 className="mt-3 mb-3 font-bold">Sort jobs by type</h4>
+                    <h4 className="mt-3 mb-3 font-bold">Sort internships by type</h4>
                     <select
                         className="select select-bordered"
                         onChange={handleSortChange}
                         defaultValue=""
                     >
-                        {Array.from(new Set(jobs.map((job) => job.type))).map(
+                        {Array.from(new Set(internships.map((internship) => internship.type))).map(
                             (type, index) => (
                                 <option key={index} value={type}>
                                     {type}
@@ -71,13 +70,13 @@ const Jobs = () => {
                         )}
                     </select>
 
-                    <h4 className="mt-3 mb-3 font-bold">Filter jobs by category</h4>
+                    <h4 className="mt-3 mb-3 font-bold">Filter internships by category</h4>
                     <select
                         className="select select-bordered"
                         onChange={handleFilterChange}
                         defaultValue=""
                     >
-                        {Array.from(new Set(jobs.map((job) => job.category))).map(
+                        {Array.from(new Set(internships.map((internship) => internship.category))).map(
                             (category, index) => (
                                 <option key={index} value={category}>
                                     {category}
@@ -86,36 +85,35 @@ const Jobs = () => {
                         )}
                     </select>
                     <button
-                        onClick={showAllJobs}
-                        className="btn btn-outline  mb-4"
+                        onClick={showAllInternships}
+                        className="btn btn-outline mb-4"
                     >
                         Reset Filters
                     </button>
                 </div>
             </div>
-            <div className="md:w-2/3 lg:w-3/4  p-4">
-
-                <div className="w-[95%]    md:w-[79%] mx-auto">
-                    <h3 className="mt-4  font-semibold text-3xl mb-8 " >Find Your Dream Jobs from JobHub</h3>
-                    {filteredJobs.map((job) => (
-                        <div key={job.id} className="mb-6 mt-2">
-                            <div className="card  h-full border-2">
+            <div className="md:w-2/3 lg:w-3/4 p-4">
+                <div className="w-[95%] md:w-[79%] mx-auto">
+                    <h3 className="mt-4 font-semibold text-3xl mb-8">Find Your Dream Internships</h3>
+                    {filteredInternships.map((internship) => (
+                        <div key={internship.id} className="mb-6 mt-2">
+                            <div className="card h-full border-2">
                                 <div className="card-body">
-                                    <h2 className="card-title">{job.title}</h2>
-                                    <p className="font-light text-xl">{job.company}</p>
-                                    <p className="font-light text-sm">{job.description}</p>
+                                    <h2 className="card-title">{internship.title}</h2>
+                                    <p className="font-light text-xl">{internship.company}</p>
+                                    <p className="font-light text-sm">{internship.description}</p>
                                     <div className="flex justify-between">
                                         <div>
                                             <p className="font-medium">Salary:</p>
-                                            <p className="font-light">{job.salary}</p>
+                                            <p className="font-light">{internship.salary}</p>
                                         </div>
                                         <div>
                                             <p className="font-medium">Location:</p>
-                                            <p className="font-light">{job.location}</p>
+                                            <p className="font-light">{internship.location}</p>
                                         </div>
                                         <div>
                                             <p className="font-medium">Type:</p>
-                                            <p className="font-light">{job.type}</p>
+                                            <p className="font-light">{internship.type}</p>
                                         </div>
                                     </div>
                                     <div className="card-actions justify-end mt-4">
@@ -126,12 +124,10 @@ const Jobs = () => {
                             </div>
                         </div>
                     ))}
-
                 </div>
-
             </div>
         </div>
     );
 };
 
-export default Jobs;
+export default Internships;

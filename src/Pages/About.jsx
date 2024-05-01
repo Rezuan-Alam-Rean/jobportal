@@ -1,8 +1,11 @@
+import Contact from "../Components/Contact";
+import Hero from "../Components/Hero";
 
 const About = () => {
     return (
         <div>
-            about japanese
+            <Hero/>
+            <Contact/>
         </div>
     );
 };
