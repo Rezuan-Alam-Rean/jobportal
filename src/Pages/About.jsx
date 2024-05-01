@@ -6,7 +6,7 @@ import Promot from "../Components/Promot";
 const About = () => {
     return (
         <div>
-            {/* <Hero/> */}
+            <Hero/>
             <HowItWorks/>
             <Promot/>
             <Contact/>

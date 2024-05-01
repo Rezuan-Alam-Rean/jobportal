@@ -17,7 +17,7 @@ const Promot = () => {
             </div>
             <div className="w-full lg:w-1/3">
                 <img
-                    className="rounded-full md:h-[500px] md:w-[500px] h-56 w-56"
+                    className="rounded-full mx-auto md:h-[500px] md:w-[500px] h-80 w-80"
                     src={logo}
                     alt="Job Seeker"
                 />

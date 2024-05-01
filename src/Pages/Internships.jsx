@@ -58,7 +58,7 @@ const Internships = () => {
                     </div>
                     <div className="w-full lg:w-1/3">
                         <img
-                            className="rounded-full md:h-[500px] md:w-[500px] "
+                            className="rounded-full mx-auto  "
                             src={imge}
                             alt="Job Seeker"
                         />
