@@ -70,7 +70,10 @@ const Navbar = () => {
                             {items}
                         </ul>
                     </div>
+                    <Link to="/">
+
                     <p className=" text-xl font-extrabold   "><span className="text-sky-400">Job</span>Hub</p>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal gap-x-5 font-semibold    ">

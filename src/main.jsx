@@ -14,6 +14,9 @@ import Jobs from './Pages/Jobs';
 import Internships from './Pages/Internships';
 import Login from './Pages/Login';
 import { Toaster } from 'react-hot-toast';
+import Jobdetails from './Components/Shared/Jobdetails';
+import Intdetails from './Components/Shared/Intdetails';
+import Homejobdetails from './Components/Shared/Homejobdetails';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +45,22 @@ const router = createBrowserRouter([
         path: "login",
         element: <Login/>,
       },
+      {
+        path : "/jobdetails/:id",
+        element: <Jobdetails/>,
+        loader : ()=> fetch(`/jobs.json`)
+    },
+      {
+        path : "/homejobdetails/:id",
+        element: <Homejobdetails/>,
+        loader : ()=> fetch(`/jobs.json`)
+    },
+      {
+        path : "/intdetails/:id",
+        element: <Intdetails/>,
+        loader : ()=> fetch(`/internships.json`)
+    },
+      
      
     ],
   },

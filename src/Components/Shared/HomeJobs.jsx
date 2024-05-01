@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const HomeJobs = () => {
     const [jobs, setJobs] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
@@ -30,21 +31,21 @@ const HomeJobs = () => {
 
     const filteredJobs = jobs
         .filter((job) => {
-            return filter ? job.category === filter : true;
+            return filter ? job?.category === filter : true;
         })
         .filter((job) => {
-            return sort ? job.type === sort : true;
+            return sort ? job?.type === sort : true;
         })
         .filter((job) => {
             return (
-                job.title.toLowerCase().includes(searchTerm) ||
-                job.description.toLowerCase().includes(searchTerm) ||
-                job.company.toLowerCase().includes(searchTerm)
+                job?.title.toLowerCase().includes(searchTerm) ||
+                job?.description.toLowerCase().includes(searchTerm) ||
+                job?.company.toLowerCase().includes(searchTerm)
             );
         });
     return (
         <div>
-             <div className="flex flex-col sm:flex-row  lg:w-full md:px-16">
+            <div className="flex flex-col sm:flex-row  lg:w-full md:px-16">
                 <div className="lg:w-1/4 p-4 md:border-r-2 border-gray-200 md:sticky md:top-0 md:h-screen overflow-auto">
                     <div className="space-y-4 w-[80%] mx-auto flex flex-col ">
 
@@ -61,7 +62,7 @@ const HomeJobs = () => {
                             onChange={handleSortChange}
                             defaultValue=""
                         >
-                            {Array.from(new Set(jobs.map((job) => job.type))).map(
+                            {Array.from(new Set(jobs?.map((job) => job?.type))).map(
                                 (type, index) => (
                                     <option key={index} value={type}>
                                         {type}
@@ -76,7 +77,7 @@ const HomeJobs = () => {
                             onChange={handleFilterChange}
                             defaultValue=""
                         >
-                            {Array.from(new Set(jobs.map((job) => job.category))).map(
+                            {Array.from(new Set(jobs?.map((job) => job?.category))).map(
                                 (category, index) => (
                                     <option key={index} value={category}>
                                         {category}
@@ -96,30 +97,34 @@ const HomeJobs = () => {
 
                     <div className="w-[95%]    md:w-[79%] mx-auto">
                         <h3 className="mt-4  font-semibold  mb-8 " >Find jobs with salaries up to ¥6,200,000 per year</h3>
-                        {filteredJobs.map((job) => (
-                            <div key={job.id} className="mb-6 mt-2">
+                        {filteredJobs?.map((job) => (
+                            <div key={job?.id} className="mb-6 mt-2">
                                 <div className="card  h-full border-2">
                                     <div className="card-body">
-                                        <h2 className="card-title">{job.title}</h2>
-                                        <p className="font-light text-xl">{job.company}</p>
-                                        <p className="font-light text-sm">{job.description}</p>
+                                        <h2 className="card-title">{job?.title}</h2>
+                                        <p className="font-light text-xl">{job?.company}</p>
+                                        <p className="font-light text-sm">{job?.description}</p>
                                         <div className="flex justify-between">
                                             <div>
                                                 <p className="font-medium">Salary:</p>
-                                                <p className="font-light">{job.salary}</p>
+                                                <p className="font-light">{job?.salary}</p>
                                             </div>
                                             <div>
                                                 <p className="font-medium">Location:</p>
-                                                <p className="font-light">{job.location}</p>
+                                                <p className="font-light">{job?.location}</p>
                                             </div>
                                             <div>
                                                 <p className="font-medium">Type:</p>
-                                                <p className="font-light">{job.type}</p>
+                                                <p className="font-light">{job?.type}</p>
                                             </div>
                                         </div>
                                         <div className="card-actions justify-end mt-4">
-                                            <button className="btn btn-sm">View</button>
-                                            <button className="btn btn-sm" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
+                                            <Link to={`/homejobdetails/${job?.id}`}>
+
+                                                <button className="btn ">View</button>
+
+                                            </Link>
+                                            {/* <button className="btn btn-sm" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
                                             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                                 <div className="modal-box">
                                                     <h3 className="font-bold  text-2xl">Congratulations!</h3>
@@ -127,12 +132,12 @@ const HomeJobs = () => {
                                                     <p className="py-2">Press ESC key or click the button below to close</p>
                                                     <div className="modal-action">
                                                         <form method="dialog">
-                                                            {/* if there is a button in form, it will close the modal */}
+                                                            
                                                             <button className="btn">Close</button>
                                                         </form>
                                                     </div>
                                                 </div>
-                                            </dialog>
+                                            </dialog> */}
                                         </div>
                                     </div>
                                 </div>

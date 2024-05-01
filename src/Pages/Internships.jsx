@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import imge from "../assets/image/japan.svg"
+import { Link } from "react-router-dom";
 const Internships = () => {
     const [internships, setInternships] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
@@ -31,16 +32,16 @@ const Internships = () => {
 
     const filteredInternships = internships
         .filter((internship) => {
-            return filter ? internship.category === filter : true;
+            return filter ? internship?.category === filter : true;
         })
         .filter((internship) => {
-            return sort ? internship.type === sort : true;
+            return sort ? internship?.type === sort : true;
         })
         .filter((internship) => {
             return (
-                internship.title.toLowerCase().includes(searchTerm) ||
-                internship.description.toLowerCase().includes(searchTerm) ||
-                internship.company.toLowerCase().includes(searchTerm)
+                internship?.title.toLowerCase().includes(searchTerm) ||
+                internship?.description.toLowerCase().includes(searchTerm) ||
+                internship?.company.toLowerCase().includes(searchTerm)
             );
         });
 
@@ -82,7 +83,7 @@ const Internships = () => {
                             onChange={handleSortChange}
                             defaultValue=""
                         >
-                            {Array.from(new Set(internships.map((internship) => internship.type))).map(
+                            {Array.from(new Set(internships?.map((internship) => internship?.type))).map(
                                 (type, index) => (
                                     <option key={index} value={type}>
                                         {type}
@@ -97,7 +98,7 @@ const Internships = () => {
                             onChange={handleFilterChange}
                             defaultValue=""
                         >
-                            {Array.from(new Set(internships.map((internship) => internship.category))).map(
+                            {Array.from(new Set(internships?.map((internship) => internship?.category))).map(
                                 (category, index) => (
                                     <option key={index} value={category}>
                                         {category}
@@ -116,30 +117,34 @@ const Internships = () => {
                 <div className="md:w-2/3 lg:w-3/4 p-4">
                     <div className="w-[95%] md:w-[79%] mx-auto">
                         <h3 className="mt-4 font-semibold  mb-8">Find Internships with salaries up to ¥1,500,000 per year </h3>
-                        {filteredInternships.map((internship) => (
-                            <div key={internship.id} className="mb-6 mt-2">
+                        {filteredInternships?.map((internship) => (
+                            <div key={internship?.id} className="mb-6 mt-2">
                                 <div className="card h-full border-2">
                                     <div className="card-body">
-                                        <h2 className="card-title">{internship.title}</h2>
-                                        <p className="font-light text-xl">{internship.company}</p>
-                                        <p className="font-light text-sm">{internship.description}</p>
+                                        <h2 className="card-title">{internship?.title}</h2>
+                                        <p className="font-light text-xl">{internship?.company}</p>
+                                        <p className="font-light text-sm">{internship?.description}</p>
                                         <div className="flex justify-between">
                                             <div>
                                                 <p className="font-medium">Salary:</p>
-                                                <p className="font-light">{internship.salary}</p>
+                                                <p className="font-light">{internship?.salary}</p>
                                             </div>
                                             <div>
                                                 <p className="font-medium">Location:</p>
-                                                <p className="font-light">{internship.location}</p>
+                                                <p className="font-light">{internship?.location}</p>
                                             </div>
                                             <div>
                                                 <p className="font-medium">Type:</p>
-                                                <p className="font-light">{internship.type}</p>
+                                                <p className="font-light">{internship?.type}</p>
                                             </div>
                                         </div>
                                         <div className="card-actions justify-end mt-4">
-                                            <button className="btn btn-sm">View</button>
-                                            <button className="btn btn-sm" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
+                                            <Link to={`/intdetails/${internship?.id}`}>
+
+                                                <button className="btn ">View</button>
+
+                                            </Link>
+                                            {/* <button className="btn btn-sm" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
                                             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                                 <div className="modal-box">
                                                     <h3 className="font-bold  text-2xl">Congratulations!</h3>
@@ -147,12 +152,12 @@ const Internships = () => {
                                                     <p className="py-2">Press ESC key or click the button below to close</p>
                                                     <div className="modal-action">
                                                         <form method="dialog">
-                                                            {/* if there is a button in form, it will close the modal */}
+                                                            
                                                             <button className="btn">Close</button>
                                                         </form>
                                                     </div>
                                                 </div>
-                                            </dialog>
+                                            </dialog> */}
                                         </div>
                                     </div>
                                 </div>

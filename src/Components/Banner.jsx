@@ -12,7 +12,7 @@ const Banner = () => {
                     portal – your key to smart, secure, and simplified job
                     hunting in Japan!
                 </p>
-                <Link to="/login">
+                <Link to="/Internships">
                     <button className="btn btn-outline text-white font-bold mt-4">
                         GET STARTED
                     </button>
