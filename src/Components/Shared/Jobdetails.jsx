@@ -13,12 +13,12 @@ const JobDetails = () => {
     }, [id, details]);
 
     return (
-        <div className="w-full min-h-screen px-4 sm:px-10 md:px-20">
+        <div className="w-full min-h-screen mt-4 px-4 sm:px-10 md:px-20">
             <div key={job?.id} className="mb-6 mt-2">
                 <div className="card w-full md:w-[70%] h-full mx-auto">
-                    <div className="banner flex flex-col md:flex-row justify-center items-center h-[150px] gap-x-4 md:gap-x-28 bg-cover bg-center">
-                        <div className="max-w-[500px] p-4 space-y-4">
-                            <h1 className="text-2xl md:text-3xl mt-8 font-bold">
+                    <div className="banner flex flex-col md:flex-row justify-center items-center  gap-x-4 md:gap-x-28 bg-cover bg-center">
+                        <div className=" p-4  space-y-4">
+                            <h1 className="text-2xl md:text-3xl  font-bold">
                                 Submit information carefully
                             </h1>
                         </div>
@@ -30,7 +30,7 @@ const JobDetails = () => {
                             />
                         </div>
                     </div>
-                    <h1 className="text-3xl font-bold text-center mt-8 mb-3">Job Details</h1>
+                    <h1 className="text-3xl font-bold text-center mt-4 mb-3">Job Details</h1>
                     <div className="card-body">
                         <h2 className="card-title">{job?.title}</h2>
                         <p className="font-bold">{job?.company}</p>
